@@ -1,0 +1,13 @@
+GET  http://localhost:3001/todos
+
+
+
+###
+POST http://localhost:3001/todos
+Content-Type: : application/json
+
+{
+        "id" :"todo1",
+        "title"  : "Read News",
+        "completed" : true
+    }
