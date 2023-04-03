@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors')
 require('dotenv').config()
 const todorout = require('./routes/todos')
 const mongoose = require('mongoose');
@@ -15,6 +16,7 @@ db.once('open', ()=>console.log('subt'));
 
 const app = express()
 const port = 3000;
+app.use(cors())
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/todos',todorout);
