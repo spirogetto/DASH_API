@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
 
-mongoose.connect(process.env.DATABASE_LINK);
+mongoose.connect('mongodb+srv://mushfikmaruf:database@tble.b8tyoyq.mongodb.net/?retryWrites=true&w=majority');
 
 
 const db = mongoose.connection
