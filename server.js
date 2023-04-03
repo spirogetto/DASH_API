@@ -22,7 +22,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/todos',todorout);
 
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.json({'me' : 'Hello World!'})
 });
 
 app.post('/', (req, res) => {
