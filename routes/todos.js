@@ -68,10 +68,20 @@ router.post('/',createOneTodo)
 
 
 //Update a todo
-function updateOneTodo(req,res) {
+const updateOneTodo= async(req,res)=>{
 
-    const id = req.params.todoIdNo;
-    res.send('Updated One Todo')
+    try {
+        const id = req.params.todoIdNo;
+    
+        await Todos.findByIdAndUpdate(id,req.body);
+        const todolist = await Todos.find();
+        res.json(todolist)
+       
+        
+    } catch (error) {
+        res.status(500).send('Jhamela')
+        
+    }
     
 }
 router.patch('/:todoIdNo',updateOneTodo)
