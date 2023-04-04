@@ -1,12 +1,12 @@
-GET  http://localhost:3000/mo
+GET  http://localhost:3000/tasks
 
 
 
 ###
-POST https://dash-life-api.onrender.com/todos
+POST http://localhost:3000/tasks
 Content-Type: : application/json
 
 {
-    "title": "Watch fa",
-    "completed": "false"
+    "cat": "Watch fa",
+    "duration": 20
 }
