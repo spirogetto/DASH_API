@@ -1,4 +1,3 @@
-const coll = require('../localData/demoData.json')
 const mongoose = require('mongoose');
 const express = require('express');
 const router = require('express').Router();
